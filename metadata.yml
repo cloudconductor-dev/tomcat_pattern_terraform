@@ -32,6 +32,6 @@ variables:
   - web_server_size
   - ap_server_size
   - db_server_size
-output:
+outputs:
   - cluster_addresses
   - frontend_addresses
