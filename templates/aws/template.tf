@@ -102,3 +102,7 @@ resource "aws_instance" "db_server" {
 output "cluster_addresses" {
   value = "${join(", ", concat(aws_instance.web_server.*.private_ip, aws_instance.ap_server.*.private_ip, aws_instance.db_server.*.private_ip))}"
 }
+
+output "frontend_addresses" {
+  value = "${join(", ", concat(aws_instance.web_server.*.public_ip, aws_instance.ap_server.*.public_ip, aws_instance.db_server.*.public_ip))}"
+}
