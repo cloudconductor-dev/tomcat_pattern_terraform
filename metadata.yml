@@ -12,6 +12,7 @@ conflicts:    []
 
 providers:
     aws: terraform
+    openstack: terraform
 
 supports:
   - os: "centos"
