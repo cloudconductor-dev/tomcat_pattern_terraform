@@ -17,23 +17,3 @@ providers:
 supports:
   - os: "centos"
     version: "= 6.5"
-
-variables:
-  - bootstrap_expect
-  - vpc_id
-  - subnet_id
-  - shared_security_group
-  - key_name
-  - web_image
-  - ap_image
-  - db_image
-  - web_instance_type
-  - ap_instance_type
-  - db_instance_type
-  - web_server_size
-  - ap_server_size
-  - db_server_size
-
-outputs:
-  - cluster_addresses
-  - frontend_addresses
