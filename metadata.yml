@@ -7,9 +7,33 @@ version:          "1.1.0"
 url:              "https://github.com/cloudconductor-patterns/tomcat_pattern"
 
 type:      "platform"
-depends:   []
+dependencies: ["cloud_conductor_init"]
 conflicts: []
+
+providers:
+    aws: terraform
+    openstack: terraform
 
 supports:
   - os: "centos"
     version: "= 6.5"
+
+variables:
+  - bootstrap_expect
+  - vpc_id
+  - subnet_id
+  - shared_security_group
+  - key_name
+  - web_image
+  - ap_image
+  - db_image
+  - web_instance_type
+  - ap_instance_type
+  - db_instance_type
+  - web_server_size
+  - ap_server_size
+  - db_server_size
+
+outputs:
+  - cluster_addresses
+  - frontend_addresses
